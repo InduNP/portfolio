@@ -3,9 +3,9 @@ import './Experience.css';
 
 export function Experience() {
     const logs = [
-        { year: '2025', tag: 'TRAINING', text: 'Completed rigorous DSA & C++ Training module. Optimization parameters updated.', color: 'var(--neon-blue)' },
-        { year: '2026', tag: 'IMPLEMENTATION', text: 'Architected and deployed Custom Deep Learning models. Accuracy vectors improved.', color: 'var(--neon-purple)' },
-        { year: '2026', tag: 'DEVELOPMENT', text: 'Developed scalable backend server architectures. Throughput capacity maximized.', color: 'var(--neon-green)' },
+        { year: '2020-22', tag: 'ACADEMIC_SYS_INIT', text: 'Mubarak Higher Secondary. Higher Secondary Biology Science (90%). Kerala, India.', color: 'var(--neon-blue)' },
+        { year: '2023-27', tag: 'B_TECH_EXECUTION', text: 'Lovely Professional University. Bachelor of Technology - Computer Science & Engineering. Punjab, India.', color: 'var(--neon-purple)' },
+        { year: '2025', tag: 'SKILL_TRAINING', text: 'Completed rigorous DSA & C++ Training module. Optimization parameters updated.', color: 'var(--neon-green)' },
     ];
 
     const badges = [
