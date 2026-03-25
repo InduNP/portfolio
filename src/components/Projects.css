@@ -1,0 +1,122 @@
+.projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.project-card {
+    padding: 1.5rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-left: 2px solid transparent;
+    transition: all var(--transition-smooth);
+}
+
+.project-card:hover {
+    border-left-color: var(--theme-color);
+    background: var(--bg-glass-hover);
+    transform: translateX(10px);
+}
+
+.project-card.active {
+    border-left-color: var(--theme-color);
+    background: var(--bg-glass-hover);
+    padding: 2rem;
+    transform: translateX(0);
+    /* Reset translation on active */
+    cursor: default;
+}
+
+.project-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.project-icon {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-glass);
+}
+
+.text-theme {
+    color: var(--theme-color);
+}
+
+.project-details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-details.expanded {
+    max-height: 800px;
+    opacity: 1;
+    margin-top: 1rem;
+}
+
+.project-glow {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    background: radial-gradient(circle, var(--theme-color) 0%, transparent 70%);
+    opacity: 0;
+    transform: translateY(-50%) translateX(-50%);
+    pointer-events: none;
+    transition: opacity var(--transition-smooth);
+    mix-blend-mode: screen;
+}
+
+.project-card:hover .project-glow {
+    opacity: 0.1;
+}
+
+.project-card.active .project-glow {
+    opacity: 0.05;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-fast);
+}
+
+.close-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+}
+
+.icon-btn {
+    background: var(--bg-glass);
+    border: 1px solid var(--border-glass);
+    color: var(--text-secondary);
+    padding: 0.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-btn:hover {
+    background: var(--theme-color);
+    color: var(--bg-primary);
+    border-color: var(--theme-color);
+    box-shadow: 0 0 10px var(--theme-color);
+}

@@ -1,0 +1,125 @@
+.about-section {
+    padding-top: 6rem;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.about-card {
+    padding: 2.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.about-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    background: rgba(255, 255, 255, 0.03);
+    display: inline-flex;
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-glass);
+}
+
+.card-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.corner-tl,
+.corner-br {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 1px solid var(--neon-blue);
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+}
+
+.corner-tl {
+    top: 10px;
+    left: 10px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.corner-br {
+    bottom: 10px;
+    right: 10px;
+    border-left: none;
+    border-top: none;
+}
+
+.about-card:hover .corner-tl,
+.about-card:hover .corner-br {
+    opacity: 0.5;
+}
+
+.border-neon-blue {
+    border-left: 4px solid var(--neon-blue);
+}
+
+.core-directive-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .core-directive-panel {
+        flex-direction: row;
+    }
+}
+
+.directive-content {
+    flex: 1;
+}
+
+.sys-metrics {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-glass);
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.metric-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.status-indicator {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.bg-green {
+    background-color: var(--neon-green);
+    box-shadow: 0 0 8px var(--neon-green);
+}
+
+.bg-blue {
+    background-color: var(--neon-blue);
+    box-shadow: 0 0 8px var(--neon-blue);
+}
+
+.bg-purple {
+    background-color: var(--neon-purple);
+    box-shadow: 0 0 8px var(--neon-purple);
+}

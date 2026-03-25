@@ -1,0 +1,141 @@
+.system-nav {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 3rem;
+    z-index: 100;
+    border-radius: 20px;
+    transition: width var(--transition-smooth);
+    overflow: hidden;
+}
+
+.system-nav:hover {
+    width: 200px;
+    align-items: flex-start;
+    padding: 2rem 1.5rem;
+}
+
+.nav-logo {
+    font-family: var(--font-mono);
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav-dot {
+    color: var(--neon-purple);
+    animation: blink 2s infinite;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.nav-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all var(--transition-fast);
+    padding: 0.5rem;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+}
+
+.nav-label {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity var(--transition-fast);
+    transform: translateX(-10px);
+}
+
+.system-nav:hover .nav-label {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.nav-btn:hover {
+    color: var(--neon-blue);
+    background: rgba(0, 240, 255, 0.1);
+}
+
+.nav-btn.active {
+    color: var(--neon-blue);
+}
+
+.nav-btn.active .nav-icon {
+    filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.5));
+}
+
+.nav-status {
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--neon-green);
+    box-shadow: 0 0 10px var(--neon-green);
+    animation: glow-pulse 2s infinite;
+}
+
+@media (max-width: 768px) {
+    .system-nav {
+        left: 50%;
+        top: auto;
+        bottom: 20px;
+        transform: translateX(-50%);
+        width: 90%;
+        max-width: 400px;
+        flex-direction: row;
+        padding: 1rem;
+        gap: 1rem;
+        border-radius: 100px;
+    }
+
+    .system-nav:hover {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .nav-logo,
+    .nav-status,
+    .nav-label {
+        display: none !important;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .nav-btn {
+        padding: 0.5rem;
+    }
+}
