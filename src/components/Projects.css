@@ -120,3 +120,17 @@
     border-color: var(--theme-color);
     box-shadow: 0 0 10px var(--theme-color);
 }
+
+@media (max-width: 768px) {
+    .project-card {
+        padding: 1rem;
+    }
+
+    .project-card.active {
+        padding: 1.25rem;
+    }
+
+    .project-header h3 {
+        font-size: 1.2rem;
+    }
+}

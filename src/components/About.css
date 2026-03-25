@@ -123,3 +123,14 @@
     background-color: var(--neon-purple);
     box-shadow: 0 0 8px var(--neon-purple);
 }
+
+@media (max-width: 768px) {
+    .about-card {
+        padding: 1.5rem;
+    }
+
+    .core-directive-panel {
+        padding: 1.5rem;
+        align-items: flex-start;
+    }
+}

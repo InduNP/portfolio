@@ -51,13 +51,16 @@ body {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg-primary);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--text-muted);
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--neon-blue);
 }
@@ -70,7 +73,7 @@ body {
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  background-image: 
+  background-image:
     linear-gradient(var(--border-glass) 1px, transparent 1px),
     linear-gradient(90deg, var(--border-glass) 1px, transparent 1px);
   background-size: 50px 50px;
@@ -98,14 +101,16 @@ body {
 
 .main-content {
   flex: 1;
-  padding: 4rem 2rem 4rem 6rem; /* Left padding accommodates side menu */
+  padding: 4rem 2rem 4rem 6rem;
+  /* Left padding accommodates side menu */
   max-width: 1400px;
   margin: 0 auto;
 }
 
 @media (max-width: 768px) {
   .main-content {
-    padding: 2rem 1rem 6rem 1rem; /* Bottom padding for mobile menu */
+    padding: 2rem 1rem 6rem 1rem;
+    /* Bottom padding for mobile menu */
   }
 }
 
@@ -154,8 +159,15 @@ body {
 
 /* Animations */
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
 .cursor-blink {
@@ -163,8 +175,13 @@ body {
 }
 
 @keyframes scanline {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(100vh); }
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(100vh);
+  }
 }
 
 .scanline-effect {
@@ -181,9 +198,17 @@ body {
 }
 
 @keyframes glow-pulse {
-  0% { box-shadow: 0 0 10px rgba(0, 240, 255, 0.2); }
-  50% { box-shadow: 0 0 20px rgba(0, 240, 255, 0.5); }
-  100% { box-shadow: 0 0 10px rgba(0, 240, 255, 0.2); }
+  0% {
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(0, 240, 255, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.2);
+  }
 }
 
 .btn-primary {
@@ -240,7 +265,7 @@ section {
 .section-title {
   font-family: var(--font-mono);
   font-size: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -255,4 +280,16 @@ section {
 
 .section-title .hash {
   color: var(--neon-purple);
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 3rem 0;
+    min-height: auto;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
 }
